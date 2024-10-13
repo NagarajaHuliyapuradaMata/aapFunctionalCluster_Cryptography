@@ -20,6 +20,21 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_IO{
+   public:
+      virtual void GetAllowedUsage     (void) = 0;
+      virtual void GetCapacity         (void) = 0;
+      virtual void GetCryptoObjectType (void) = 0;
+      virtual void GetObjectId         (void) = 0;
+      virtual void GetPayloadSize      (void) = 0;
+      virtual void GetPrimitiveId      (void) = 0;
+      virtual void GetTypeRestriction  (void) = 0;
+      virtual void IsObjectExportable  (void) = 0;
+      virtual void IsObjectSession     (void) = 0;
+      virtual void IsValid             (void) = 0;
+      virtual void IsVolatile          (void) = 0;
+      virtual void IsWritable          (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

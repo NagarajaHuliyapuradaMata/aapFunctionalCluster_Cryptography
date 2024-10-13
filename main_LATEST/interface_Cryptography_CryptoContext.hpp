@@ -20,6 +20,12 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_CryptoContext{
+   public:
+      virtual void GetCryptoPrimitiveId (void) = 0;
+      virtual void IsInitialized        (void) = 0;
+      virtual void MyProvider           (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */
