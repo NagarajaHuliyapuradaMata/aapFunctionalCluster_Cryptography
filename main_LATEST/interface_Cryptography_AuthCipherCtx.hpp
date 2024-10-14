@@ -20,6 +20,23 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_AuthCipherCtx{
+   public:
+      virtual void Check                    (void) = 0;
+      virtual void GetDigest                (void) = 0;
+      virtual void GetDigestService         (void) = 0;
+      virtual void GetMaxAssociatedDataSize (void) = 0;
+/*
+      virtual void GetTransformation        (void) = 0;
+*/
+      virtual void ProcessConfidentialData  (void) = 0;
+/*
+      virtual void Reset                    (void) = 0;
+      virtual void SetKey                   (void) = 0;
+      virtual void Start                    (void) = 0;
+*/
+      virtual void UpdateAssociatedData     (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

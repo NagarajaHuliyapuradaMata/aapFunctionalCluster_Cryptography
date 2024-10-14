@@ -20,6 +20,23 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_StreamCipherCtx{
+   public:
+      virtual void CountBytesInCache        (void) = 0;
+      virtual void EstimateMaxInputSize     (void) = 0;
+      virtual void EstimateRequiredCapacity (void) = 0;
+      virtual void FinishBytes              (void) = 0;
+      virtual void GetBlockService          (void) = 0;
+      virtual void GetTransformation        (void) = 0;
+      virtual void IsBytewiseMode           (void) = 0;
+      virtual void IsSeekableMode           (void) = 0;
+      virtual void ProcessBlocks            (void) = 0;
+      virtual void ProcessBytes             (void) = 0;
+      virtual void Reset                    (void) = 0;
+      virtual void Seek                     (void) = 0;
+      virtual void SetKey                   (void) = 0;
+      virtual void Start                    (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

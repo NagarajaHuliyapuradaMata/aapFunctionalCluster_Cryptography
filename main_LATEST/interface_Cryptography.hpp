@@ -27,6 +27,9 @@ class interface_Cryptography{
       virtual void LoadCryptoProvider     (void) = 0;
       virtual void LoadKeyStorageProvider (void) = 0;
       virtual void LoadX509Provider       (void) = 0;
+      virtual void GetBlockSize           (void) = 0;
+      virtual void GetMaxInputSize        (void) = 0;
+      virtual void GetMaxOutputSize       (void) = 0;
 };
 
 /******************************************************************************/

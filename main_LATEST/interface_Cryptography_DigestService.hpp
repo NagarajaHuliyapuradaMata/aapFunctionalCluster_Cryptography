@@ -20,6 +20,13 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_DigestService{
+   public:
+      virtual void Compare       (void) = 0;
+      virtual void GetDigestSize (void) = 0;
+      virtual void IsFinished    (void) = 0;
+      virtual void IsStarted     (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

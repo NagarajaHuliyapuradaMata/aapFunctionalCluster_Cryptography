@@ -20,6 +20,15 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_DecryptorPrivateCtx{
+   public:
+/*
+      virtual void GetCryptoService (void) = 0;
+      virtual void ProcessBlock     (void) = 0;
+      virtual void Reset            (void) = 0;
+      virtual void SetKey           (void) = 0;
+*/
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

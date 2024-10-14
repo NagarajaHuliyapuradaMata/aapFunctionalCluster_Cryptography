@@ -20,6 +20,15 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_BlockService{
+   public:
+      virtual void GetActualIvBitLength (void) = 0;
+/*
+      virtual void GetBlockSize         (void) = 0;
+*/
+      virtual void GetIvSize            (void) = 0;
+      virtual void IsValidIvSize        (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

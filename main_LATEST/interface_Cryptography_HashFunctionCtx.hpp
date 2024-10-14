@@ -20,6 +20,16 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_HashFunctionCtx{
+   public:
+      virtual void Finish           (void) = 0;
+/*
+      virtual void GetDigest        (void) = 0;
+      virtual void GetDigestService (void) = 0;
+      virtual void Start            (void) = 0;
+*/
+      virtual void Update           (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

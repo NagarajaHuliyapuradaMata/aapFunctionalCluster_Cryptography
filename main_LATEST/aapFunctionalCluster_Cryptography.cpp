@@ -13,6 +13,15 @@
 #include "interface_Cryptography_VolatileTrustedContainer.hpp"
 #include "interface_Cryptography_CryptoProvider.hpp"
 #include "interface_Cryptography_CryptoContext.hpp"
+#include "interface_Cryptography_StreamCipherCtx.hpp"
+#include "interface_Cryptography_BlockService.hpp"
+#include "interface_Cryptography_EncryptorPrivateCtx.hpp"
+#include "interface_Cryptography_DecryptorPrivateCtx.hpp"
+#include "interface_Cryptography_SymmetricBlockCipherCtx.hpp"
+#include "interface_Cryptography_AuthCipherCtx.hpp"
+#include "interface_Cryptography_HashFunctionCtx.hpp"
+#include "interface_Cryptography_MessageAuthnCodeCtx.hpp"
+#include "interface_Cryptography_DigestService.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +41,15 @@ class aapFunctionalCluster_Cryptography:
    ,  public interface_Cryptography_VolatileTrustedContainer
    ,  public interface_Cryptography_CryptoProvider
    ,  public interface_Cryptography_CryptoContext
+   ,  public interface_Cryptography_StreamCipherCtx
+   ,  public interface_Cryptography_BlockService
+   ,  public interface_Cryptography_EncryptorPrivateCtx
+   ,  public interface_Cryptography_DecryptorPrivateCtx
+   ,  public interface_Cryptography_SymmetricBlockCipherCtx
+   ,  public interface_Cryptography_AuthCipherCtx
+   ,  public interface_Cryptography_HashFunctionCtx
+   ,  public interface_Cryptography_MessageAuthnCodeCtx
+   ,  public interface_Cryptography_DigestService
 {
    public:
       void GenerateRandomData              (void);
@@ -39,6 +57,9 @@ class aapFunctionalCluster_Cryptography:
       void LoadCryptoProvider              (void);
       void LoadKeyStorageProvider          (void);
       void LoadX509Provider                (void);
+      void GetBlockSize                    (void);
+      void GetMaxInputSize                 (void);
+      void GetMaxOutputSize                (void);
       void GetAllowedUsage                 (void);
       void GetCapacity                     (void);
       void GetCryptoObjectType             (void);
@@ -92,6 +113,85 @@ class aapFunctionalCluster_Cryptography:
       void GetCryptoPrimitiveId            (void);
       void IsInitialized                   (void);
       void MyProvider                      (void);
+      void CountBytesInCache               (void);
+      void EstimateMaxInputSize            (void);
+      void EstimateRequiredCapacity        (void);
+      void FinishBytes                     (void);
+      void GetBlockService                 (void);
+      void GetTransformation               (void);
+      void IsBytewiseMode                  (void);
+      void IsSeekableMode                  (void);
+      void ProcessBlocks                   (void);
+      void ProcessBytes                    (void);
+      void Reset                           (void);
+      void Seek                            (void);
+      void SetKey                          (void);
+      void Start                           (void);
+      void GetActualIvBitLength            (void);
+/*
+      void GetBlockSize                    (void);
+*/
+      void GetIvSize                       (void);
+      void IsValidIvSize                   (void);
+
+      void GetCryptoService                (void);
+      void ProcessBlock                    (void);
+/*
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+/*
+      void GetCryptoService                (void);
+      void ProcessBlock                    (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+/*
+      void GetCryptoService                (void;
+      void GetTransformation               (void);
+      void ProcessBlock                    (void);
+      void ProcessBlocks                   (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+      void Check                           (void);
+      void GetDigest                       (void);
+      void GetDigestService                (void);
+      void GetMaxAssociatedDataSize        (void);
+/*
+      void GetTransformation               (void);
+*/
+      void ProcessConfidentialData         (void);
+/*
+      void Reset                           (void);
+      void SetKey                          (void);
+      void Start                           (void);
+*/
+      void UpdateAssociatedData            (void);
+
+      void Finish                          (void);
+/*
+      void GetDigest                       (void);
+      void GetDigestService                (void);
+      void Start                           (void);
+*/
+      void Update                          (void);
+
+/*
+      void Check                           (void);
+      void Finish                          (void);
+      void GetDigest                       (void);
+      void GetDigestService                (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+      void Start                           (void);
+      void Update                          (void);
+*/
+
+      void Compare                         (void);
+      void GetDigestSize                   (void);
+      void IsFinished                      (void);
+      void IsStarted                       (void);
 };
 
 /******************************************************************************/
@@ -122,6 +222,15 @@ void aapFunctionalCluster_Cryptography::LoadKeyStorageProvider(void){
 }
 
 void aapFunctionalCluster_Cryptography::LoadX509Provider(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetBlockSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxInputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxOutputSize(void){
 }
 
 void aapFunctionalCluster_Cryptography::GetAllowedUsage(void){
@@ -281,6 +390,199 @@ void aapFunctionalCluster_Cryptography::IsInitialized(void){
 }
 
 void aapFunctionalCluster_Cryptography::MyProvider(void){
+}
+
+void aapFunctionalCluster_Cryptography::CountBytesInCache(void){
+}
+
+void aapFunctionalCluster_Cryptography::EstimateMaxInputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::EstimateRequiredCapacity(void){
+}
+
+void aapFunctionalCluster_Cryptography::FinishBytes(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetBlockService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetTransformation(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsBytewiseMode(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsSeekableMode(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBlocks(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBytes(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::Seek(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::Start(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetActualIvBitLength(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetBlockSize(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::GetIvSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsValidIvSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetCryptoService(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBlock(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+/*
+void aapFunctionalCluster_Cryptography::GetCryptoService(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBlock(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+/*
+void aapFunctionalCluster_Cryptography::GetCryptoService(void{
+}
+
+void aapFunctionalCluster_Cryptography::GetTransformation(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBlock(void){
+}
+
+void aapFunctionalCluster_Cryptography::ProcessBlocks(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::Check(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigest(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigestService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxAssociatedDataSize(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetTransformation(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::ProcessConfidentialData(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::Start(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::UpdateAssociatedData(void){
+}
+
+void aapFunctionalCluster_Cryptography::Finish(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetDigest(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigestService(void){
+}
+
+void aapFunctionalCluster_Cryptography::Start(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::Update(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Check(void){
+}
+
+void aapFunctionalCluster_Cryptography::Finish(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigest(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigestService(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::Start(void){
+}
+
+void aapFunctionalCluster_Cryptography::Update(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::Compare(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetDigestSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsFinished(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsStarted(void){
 }
 
 /******************************************************************************/
