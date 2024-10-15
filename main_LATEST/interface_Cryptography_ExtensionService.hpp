@@ -20,6 +20,18 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_ExtensionService{
+   public:
+      virtual void GetActualKeyBitLength   (void) = 0;
+      virtual void GetActualKeyCOUID       (void) = 0;
+/*
+      virtual void GetAllowedUsage         (void) = 0;
+*/
+      virtual void GetMaxKeyBitLength      (void) = 0;
+      virtual void GetMinKeyBitLength      (void) = 0;
+      virtual void IsKeyAvailable          (void) = 0;
+      virtual void IsKeyBitLengthSupported (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

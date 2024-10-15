@@ -22,6 +22,11 @@
 #include "interface_Cryptography_HashFunctionCtx.hpp"
 #include "interface_Cryptography_MessageAuthnCodeCtx.hpp"
 #include "interface_Cryptography_DigestService.hpp"
+#include "interface_Cryptography_KeyEncapsulatorPublicCtx.hpp"
+#include "interface_Cryptography_KeyDecapsulatorPrivateCtx.hpp"
+#include "interface_Cryptography_SymmetricKeyWrapperCtx.hpp"
+#include "interface_Cryptography_RandomGeneratorCtx.hpp"
+#include "interface_Cryptography_ExtensionService.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -50,6 +55,11 @@ class aapFunctionalCluster_Cryptography:
    ,  public interface_Cryptography_HashFunctionCtx
    ,  public interface_Cryptography_MessageAuthnCodeCtx
    ,  public interface_Cryptography_DigestService
+   ,  public interface_Cryptography_KeyEncapsulatorPublicCtx
+   ,  public interface_Cryptography_KeyDecapsulatorPrivateCtx
+   ,  public interface_Cryptography_SymmetricKeyWrapperCtx
+   ,  public interface_Cryptography_RandomGeneratorCtx
+   ,  public interface_Cryptography_ExtensionService
 {
    public:
       void GenerateRandomData              (void);
@@ -192,6 +202,62 @@ class aapFunctionalCluster_Cryptography:
       void GetDigestSize                   (void);
       void IsFinished                      (void);
       void IsStarted                       (void);
+
+
+
+      void AddKeyingData                   (void);
+      void Encapsulate                     (void);
+      void GetEncapsulatedSize             (void);
+      void GetExtensionService             (void);
+      void GetKekEntropy                   (void);
+/*
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+
+      void DecapsulateKey                  (void);
+      void DecapsulateSeed                 (void);
+/*
+      void GetEncapsulatedSize             (void);
+      void GetExtensionService             (void);
+      void GetKekEntropy                   (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+
+      void CalculateWrappedKeySize         (void);
+/*
+      void GetExtensionService             (void);
+*/
+      void GetMaxTargetKeyLength           (void);
+      void GetTargetKeyGranularity         (void);
+/*
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+      void UnwrapConcreteKey               (void);
+      void UnwrapKey                       (void);
+      void UnwrapSeed                      (void);
+      void WrapKeyMaterial                 (void);
+
+      void AddEntropy                      (void);
+      void Generate                        (void);
+/*
+      void GetExtensionService             (void);
+*/
+      void Seed                            (void);
+/*
+      void SetKey                          (void);
+*/
+      void GetActualKeyBitLength           (void);
+      void GetActualKeyCOUID               (void);
+/*
+      void GetAllowedUsage                 (void);
+*/
+      void GetMaxKeyBitLength              (void);
+      void GetMinKeyBitLength              (void);
+      void IsKeyAvailable                  (void);
+      void IsKeyBitLengthSupported         (void);
 };
 
 /******************************************************************************/
@@ -583,6 +649,128 @@ void aapFunctionalCluster_Cryptography::IsFinished(void){
 }
 
 void aapFunctionalCluster_Cryptography::IsStarted(void){
+}
+
+void aapFunctionalCluster_Cryptography::AddKeyingData(void){
+}
+
+void aapFunctionalCluster_Cryptography::Encapsulate(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetEncapsulatedSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetKekEntropy(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::DecapsulateKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::DecapsulateSeed(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetEncapsulatedSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetKekEntropy(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::CalculateWrappedKeySize(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::GetMaxTargetKeyLength(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetTargetKeyGranularity(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::UnwrapConcreteKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::UnwrapKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::UnwrapSeed(void){
+}
+
+void aapFunctionalCluster_Cryptography::WrapKeyMaterial(void){
+}
+
+void aapFunctionalCluster_Cryptography::AddEntropy(void){
+}
+
+void aapFunctionalCluster_Cryptography::Generate(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::Seed(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::GetActualKeyBitLength(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetActualKeyCOUID(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetAllowedUsage(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::GetMaxKeyBitLength(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMinKeyBitLength(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsKeyAvailable(void){
+}
+
+void aapFunctionalCluster_Cryptography::IsKeyBitLengthSupported(void){
 }
 
 /******************************************************************************/

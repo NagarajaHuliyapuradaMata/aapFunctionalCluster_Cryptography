@@ -20,6 +20,18 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_KeyDecapsulatorPrivateCtx{
+   public:
+      virtual void DecapsulateKey      (void) = 0;
+      virtual void DecapsulateSeed     (void) = 0;
+/*
+      virtual void GetEncapsulatedSize (void) = 0;
+      virtual void GetExtensionService (void) = 0;
+      virtual void GetKekEntropy       (void) = 0;
+      virtual void Reset               (void) = 0;
+      virtual void SetKey              (void) = 0;
+*/
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

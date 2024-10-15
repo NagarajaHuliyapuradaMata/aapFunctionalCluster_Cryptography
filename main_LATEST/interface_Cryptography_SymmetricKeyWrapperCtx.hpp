@@ -20,6 +20,23 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_SymmetricKeyWrapperCtx{
+   public:
+      virtual void CalculateWrappedKeySize (void) = 0;
+/*
+      virtual void GetExtensionService     (void) = 0;
+*/
+      virtual void GetMaxTargetKeyLength   (void) = 0;
+      virtual void GetTargetKeyGranularity (void) = 0;
+/*
+      virtual void Reset                   (void) = 0;
+      virtual void SetKey                  (void) = 0;
+*/
+      virtual void UnwrapConcreteKey       (void) = 0;
+      virtual void UnwrapKey               (void) = 0;
+      virtual void UnwrapSeed              (void) = 0;
+      virtual void WrapKeyMaterial         (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

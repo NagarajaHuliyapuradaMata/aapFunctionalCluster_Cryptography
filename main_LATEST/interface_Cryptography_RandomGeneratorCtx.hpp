@@ -20,6 +20,18 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_RandomGeneratorCtx{
+   public:
+      virtual void AddEntropy          (void) = 0;
+      virtual void Generate            (void) = 0;
+/*
+      virtual void GetExtensionService (void) = 0;
+*/
+      virtual void Seed                (void) = 0;
+/*
+      virtual void SetKey              (void) = 0;
+*/
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */
