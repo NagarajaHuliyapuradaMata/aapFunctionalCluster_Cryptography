@@ -20,6 +20,16 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_KeyAgreementPrivateCtx{
+   public:
+      virtual void AgreeKey            (void) = 0;
+      virtual void AgreeSeed           (void) = 0;
+      virtual void GetExtensionService (void) = 0;
+/*
+      virtual void Reset               (void) = 0;
+      virtual void SetKey              (void) = 0;
+*/
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

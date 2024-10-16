@@ -20,6 +20,26 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_KeyDerivationFunctionCtx{
+   public:
+      virtual void AddSalt               (void) = 0;
+      virtual void AddSecretSalt         (void) = 0;
+      virtual void ConfigIterations      (void) = 0;
+      virtual void DeriveKey             (void) = 0;
+      virtual void DeriveSeed            (void) = 0;
+/*
+      virtual void GetExtensionService   (void) = 0;
+*/
+      virtual void GetKeyIdSize          (void) = 0;
+      virtual void GetTargetAlgId        (void) = 0;
+      virtual void GetTargetAllowedUsage (void) = 0;
+      virtual void GetTargetKeyBitLength (void) = 0;
+      virtual void Init                  (void) = 0;
+/*
+      virtual void Reset                 (void) = 0;
+*/
+      virtual void SetSourceKeyMaterial  (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

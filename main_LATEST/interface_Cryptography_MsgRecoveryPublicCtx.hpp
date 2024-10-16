@@ -20,6 +20,17 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_MsgRecoveryPublicCtx{
+   public:
+      virtual void DecodeAndVerify     (void) = 0;
+/*
+      virtual void GetExtensionService (void) = 0;
+      virtual void GetMaxInputSize     (void) = 0;
+      virtual void GetMaxOutputSize    (void) = 0;
+      virtual void Reset               (void) = 0;
+      virtual void SetKey              (void) = 0;
+*/
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

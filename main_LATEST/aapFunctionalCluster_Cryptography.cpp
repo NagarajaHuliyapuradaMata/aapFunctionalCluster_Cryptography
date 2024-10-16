@@ -27,6 +27,10 @@
 #include "interface_Cryptography_SymmetricKeyWrapperCtx.hpp"
 #include "interface_Cryptography_RandomGeneratorCtx.hpp"
 #include "interface_Cryptography_ExtensionService.hpp"
+#include "interface_Cryptography_KeyDerivationFunctionCtx.hpp"
+#include "interface_Cryptography_KeyAgreementPrivateCtx.hpp"
+#include "interface_Cryptography_MsgRecoveryPublicCtx.hpp"
+#include "interface_Cryptography_SigEncodePrivateCtx.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -60,6 +64,10 @@ class aapFunctionalCluster_Cryptography:
    ,  public interface_Cryptography_SymmetricKeyWrapperCtx
    ,  public interface_Cryptography_RandomGeneratorCtx
    ,  public interface_Cryptography_ExtensionService
+   ,  public interface_Cryptography_KeyDerivationFunctionCtx
+   ,  public interface_Cryptography_KeyAgreementPrivateCtx
+   ,  public interface_Cryptography_MsgRecoveryPublicCtx
+   ,  public interface_Cryptography_SigEncodePrivateCtx
 {
    public:
       void GenerateRandomData              (void);
@@ -258,6 +266,50 @@ class aapFunctionalCluster_Cryptography:
       void GetMinKeyBitLength              (void);
       void IsKeyAvailable                  (void);
       void IsKeyBitLengthSupported         (void);
+
+      void AddSalt                         (void);
+      void AddSecretSalt                   (void);
+      void ConfigIterations                (void);
+      void DeriveKey                       (void);
+      void DeriveSeed                      (void);
+/*
+      void GetExtensionService             (void);
+*/
+      void GetKeyIdSize                    (void);
+      void GetTargetAlgId                  (void);
+      void GetTargetAllowedUsage           (void);
+      void GetTargetKeyBitLength           (void);
+      void Init                            (void);
+/*
+      void Reset                           (void);
+*/
+      void SetSourceKeyMaterial            (void);
+
+      void AgreeKey                        (void);
+      void AgreeSeed                       (void);
+/*
+      void GetExtensionService             (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+
+      void DecodeAndVerify                 (void);
+/*
+      void GetExtensionService             (void);
+      void GetMaxInputSize                 (void);
+      void GetMaxOutputSize                (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+
+/*
+      void GetExtensionService             (void);
+      void GetMaxInputSize                 (void);
+      void GetMaxOutputSize                (void);
+      void Reset                           (void);
+      void SetKey                          (void);
+*/
+      void SignAndEncode                   (void);
 };
 
 /******************************************************************************/
@@ -771,6 +823,109 @@ void aapFunctionalCluster_Cryptography::IsKeyAvailable(void){
 }
 
 void aapFunctionalCluster_Cryptography::IsKeyBitLengthSupported(void){
+}
+
+void aapFunctionalCluster_Cryptography::AddSalt(void){
+}
+
+void aapFunctionalCluster_Cryptography::AddSecretSalt(void){
+}
+
+void aapFunctionalCluster_Cryptography::ConfigIterations(void){
+}
+
+void aapFunctionalCluster_Cryptography::DeriveKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::DeriveSeed(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::GetKeyIdSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetTargetAlgId(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetTargetAllowedUsage(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetTargetKeyBitLength(void){
+}
+
+void aapFunctionalCluster_Cryptography::Init(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::SetSourceKeyMaterial(void){
+}
+
+
+void aapFunctionalCluster_Cryptography::AgreeKey(void){
+}
+
+void aapFunctionalCluster_Cryptography::AgreeSeed(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+
+void aapFunctionalCluster_Cryptography::DecodeAndVerify(void){
+}
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxInputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxOutputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+
+/*
+void aapFunctionalCluster_Cryptography::GetExtensionService(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxInputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::GetMaxOutputSize(void){
+}
+
+void aapFunctionalCluster_Cryptography::Reset(void){
+}
+
+void aapFunctionalCluster_Cryptography::SetKey(void){
+}
+*/
+
+void aapFunctionalCluster_Cryptography::SignAndEncode(void){
 }
 
 /******************************************************************************/
