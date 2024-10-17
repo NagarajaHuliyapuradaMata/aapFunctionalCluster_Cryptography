@@ -20,6 +20,14 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_VerifierPublicCtx{
+   public:
+/*
+      virtual void GetSignatureService (void) = 0;
+*/
+      virtual void Verify              (void) = 0;
+      virtual void VerifyPrehashed     (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

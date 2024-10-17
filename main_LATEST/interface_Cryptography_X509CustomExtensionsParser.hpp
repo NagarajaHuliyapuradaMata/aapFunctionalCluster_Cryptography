@@ -20,6 +20,25 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_X509CustomExtensionsParser{
+   public:
+      virtual void OnBitString       (void) = 0;
+      virtual void OnBool            (void) = 0;
+      virtual void OnGeneralizedTime (void) = 0;
+      virtual void OnIa5String       (void) = 0;
+      virtual void OnInteger         (void) = 0;
+      virtual void OnNull            (void) = 0;
+      virtual void OnOctetString     (void) = 0;
+      virtual void OnOid             (void) = 0;
+      virtual void OnParsingEnd      (void) = 0;
+      virtual void OnPrintableString (void) = 0;
+      virtual void OnSequenceEnd     (void) = 0;
+      virtual void OnSequenceStart   (void) = 0;
+      virtual void OnSetEnd          (void) = 0;
+      virtual void OnSetStart        (void) = 0;
+      virtual void OnUtcTime         (void) = 0;
+      virtual void OnUtf8String      (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

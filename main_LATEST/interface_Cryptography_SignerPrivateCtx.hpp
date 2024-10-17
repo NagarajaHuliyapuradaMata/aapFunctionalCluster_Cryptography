@@ -20,6 +20,16 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_SignerPrivateCtx{
+   public:
+      virtual void GetSignatureService (void) = 0;
+/*
+      virtual void Reset               (void) = 0;
+      virtual void SetKey              (void) = 0;
+*/
+      virtual void Sign                (void) = 0;
+      virtual void SignPreHashed       (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

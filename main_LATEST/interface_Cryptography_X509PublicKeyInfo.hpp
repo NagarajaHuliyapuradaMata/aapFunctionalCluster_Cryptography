@@ -20,6 +20,17 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_X509PublicKeyInfo{
+   public:
+      virtual void GetAlgorithmId       (void) = 0;
+/*
+      virtual void GetPublicKey         (void) = 0;
+      virtual void GetRequiredHashAlgId (void) = 0;
+      virtual void GetRequiredHashSize  (void) = 0;
+      virtual void GetSignatureSize     (void) = 0;
+*/
+      virtual void IsSameKey            (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

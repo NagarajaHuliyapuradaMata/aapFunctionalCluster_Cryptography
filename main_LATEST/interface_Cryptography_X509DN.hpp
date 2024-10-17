@@ -20,6 +20,13 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_X509DN{
+   public:
+      virtual void GetAttribute (void) = 0;
+      virtual void GetDnString  (void) = 0;
+      virtual void SetAttribute (void) = 0;
+      virtual void SetDn        (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

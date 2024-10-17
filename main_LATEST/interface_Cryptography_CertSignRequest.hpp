@@ -20,6 +20,15 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_CertSignRequest{
+   public:
+      virtual void ExportASN1CertSignRequest (void) = 0;
+      virtual void GetSignature              (void) = 0;
+/*
+      virtual void Verify                    (void) = 0;
+*/
+      virtual void Version                   (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */

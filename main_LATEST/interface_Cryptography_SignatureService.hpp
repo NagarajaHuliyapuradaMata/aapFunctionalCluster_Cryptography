@@ -20,6 +20,12 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_Cryptography_SignatureService{
+   public:
+      virtual void GetRequiredHashAlgId (void) = 0;
+      virtual void GetRequiredHashSize  (void) = 0;
+      virtual void GetSignatureSize     (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */
